@@ -1,13 +1,21 @@
-import "./styles.css";
-import { Chart } from "react-google-charts";
-import Details from './details'
+// routes
+import Router from './routes';
+// theme
+import ThemeConfig from './theme';
+import GlobalStyles from './theme/globalStyles';
+// components
+import ScrollToTop from './components/ScrollToTop';
+import { BaseOptionChartStyle } from './components/charts/BaseOptionChart';
 
+// ----------------------------------------------------------------------
 
 export default function App() {
   return (
-    <div className="App">
-      
-      <Details />
-    </div>
+    <ThemeConfig>
+      <ScrollToTop />
+      <GlobalStyles />
+      <BaseOptionChartStyle />
+      <Router />
+    </ThemeConfig>
   );
 }
